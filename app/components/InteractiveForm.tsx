@@ -74,7 +74,7 @@ export default function InteractiveForm() {
   };
 
   return (
-    <div className="w-full relative">
+    <div className="relative w-[52rem]">
       <form onSubmit={handleSubmit} className="w-full">
         <div className="relative">
           <textarea
@@ -88,11 +88,11 @@ export default function InteractiveForm() {
               px-4 
               py-3 
               mt-4
-              bg-[#ffffff]
+              bg-[#EDEADE]
               text-lg
               border 
               border-gray-300 
-              text-black
+              text-[#040506]
               rounded-md 
               focus:outline-none 
               focus:ring-2 
@@ -108,7 +108,7 @@ export default function InteractiveForm() {
               right-2 
               p-2 
               rounded-full 
-              text-black 
+              text-[#040506] 
               bg-transparent 
               hover:bg-[#0A66C2]
               hover:text-white
@@ -121,24 +121,24 @@ export default function InteractiveForm() {
       </form>
 
       {post && (
-        <div className="mt-6 text-black">
+        <div className="mt-6 text-[#040506]">
           <p className="text-lg">{post}</p>
           <div className="flex gap-4 mt-4">
             <button
               onClick={handleCopy}
-              className="px-4 py-2 bg-[#0A66C2] rounded-full text-black hover:bg-[#0A66C2]"
+              className="px-4 py-2 bg-[#0A66C2] rounded-full text-[#040506] hover:bg-[#0A66C2]"
             >
               Copy
             </button>
             <button
               onClick={handleRegenerate}
-              className="px-4 py-2 bg-green-500 rounded-full text-black hover:bg-green-400"
+              className="px-4 py-2 bg-green-500 rounded-full text-[#040506] hover:bg-green-400"
             >
               Regenerate
             </button>
             <button
               onClick={handleEditClick}
-              className="px-4 py-2 bg-yellow-500 rounded-full text-black hover:bg-yellow-400"
+              className="px-4 py-2 bg-yellow-500 rounded-full text-[#040506] hover:bg-yellow-400"
             >
               Edit Post
             </button>
@@ -148,14 +148,14 @@ export default function InteractiveForm() {
 
       {loading && (
         <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-opacity-50">
-          <span className="text-black">Generating post...</span>
+          <span className="text-[#040506]">Generating post...</span>
         </div>
       )}
 
       {/* Modal for editing the post */}
       {isModalOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center">
-          <div className="bg-white p-6 rounded-lg shadow-lg w-1/2">
+        <div className="fixed top-0 left-0 w-full h-full bg-[#040506] bg-opacity-50 flex justify-center items-center">
+          <div className="bg-[#EDEADE] p-6 rounded-lg shadow-lg w-1/2">
             <h2 className="text-lg font-bold mb-4">Edit Post</h2>
             <textarea
               value={post || ''}
@@ -166,7 +166,7 @@ export default function InteractiveForm() {
             <div className="mt-4 flex justify-end gap-4">
               <button
                 onClick={handleModalClose}
-                className="px-4 py-2 bg-gray-300 rounded-full text-black hover:bg-gray-400"
+                className="px-4 py-2 bg-gray-300 rounded-full text-[#040506] hover:bg-gray-400"
               >
                 Cancel
               </button>
